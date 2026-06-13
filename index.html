@@ -1,25 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CuriousMindLab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuriousMindLab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    nav {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+    }
+
+    nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 110px 8% 90px;
+      text-align: center;
+      background: linear-gradient(135deg, #eef2ff, #ecfeff, #f0fdf4);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      margin-bottom: 18px;
+      line-height: 1.05;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 1.25rem;
+      color: #334155;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 8px;
+      border-radius: 999px;
+      background: #0f172a;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    section {
+      padding: 75px 8%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 26px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .quote {
+      font-size: 1.7rem;
+      font-weight: 800;
+      text-align: center;
+      max-width: 850px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 8%;
+      background: #0f172a;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 6px;
+        display: inline-block;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <nav>
+    <div class="logo">CuriousMindLab</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="resources.html">Resources</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<h1>CuriousMindLab</h1>
+  <div class="hero">
+    <h1>Curiosity should never be limited by circumstance.</h1>
+    <p>
+      CuriousMindLab expands access to high-quality STEM education for students
+      whose circumstances limit opportunity.
+    </p>
+    <a class="btn" href="signup.html">Get Started</a>
+    <a class="btn secondary" href="volunteer.html">Volunteer</a>
+  </div>
 
-<h2>Empowering every curious mind to learn, explore, and create.</h2>
+  <section>
+    <h2>Talent is universal. Opportunity is not.</h2>
+    <p>
+      Many curious students never receive the mentorship, resources, or encouragement
+      they deserve. CuriousMindLab exists to help change that through free learning,
+      mentoring, and accessible STEM resources.
+    </p>
+  </section>
 
-<p>
-CuriousMindLab is a student-led initiative dedicated to making
-high-quality STEM education accessible through free lessons,
-problem-solving sessions, and community learning.
-</p>
+  <section>
+    <h2>What we do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🧮 Mathematics</h3>
+        <p>Problem-solving sessions, math circles, and resources for curious learners.</p>
+      </div>
+      <div class="card">
+        <h3>⚛️ Physics</h3>
+        <p>Conceptual lessons that make physics intuitive, visual, and exciting.</p>
+      </div>
+      <div class="card">
+        <h3>💻 Computer Science</h3>
+        <p>Intro coding, algorithms, and technology projects designed for beginners.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Mentorship</h3>
+        <p>Free support for students facing financial, geographic, or accessibility barriers.</p>
+      </div>
+    </div>
+  </section>
 
-<p>
-🚀 Coming Soon
-</p>
+  <section>
+    <h2>Who we serve</h2>
+    <p>
+      Our programs are designed primarily for students who face barriers such as
+      financial hardship, limited school resources, disability, lack of mentorship,
+      or geographic isolation.
+    </p>
+  </section>
 
+  <section class="quote">
+    “Every curious mind deserves the chance to learn, explore, and create.”
+  </section>
+
+  <section>
+    <h2>Join our mission</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Students</h3>
+        <p>Join free STEM learning opportunities and mentorship programs.</p>
+        <a class="btn" href="signup.html">Sign Up</a>
+      </div>
+      <div class="card">
+        <h3>Volunteers</h3>
+        <p>Help teach, mentor, design resources, or support outreach.</p>
+        <a class="btn" href="volunteer.html">Volunteer</a>
+      </div>
+      <div class="card">
+        <h3>Educators & Partners</h3>
+        <p>Partner with us to bring STEM resources to students who need them most.</p>
+        <a class="btn" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>CuriousMindLab</strong></p>
+    <p>Curiosity should never be limited by circumstance.</p>
+  </footer>
 </body>
 </html>
