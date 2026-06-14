@@ -13,6 +13,14 @@
       line-height: 1.6;
     }
 
+    .banner {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: 700;
+    }
+
     nav {
       padding: 22px 8%;
       display: flex;
@@ -38,20 +46,20 @@
     }
 
     .hero {
-      padding: 110px 8% 90px;
+      padding: 115px 8% 95px;
       text-align: center;
       background: linear-gradient(135deg, #eef2ff, #ecfeff, #f0fdf4);
     }
 
     .hero h1 {
       font-size: clamp(2.8rem, 7vw, 5.5rem);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       line-height: 1.05;
     }
 
     .hero p {
-      max-width: 760px;
-      margin: 0 auto 30px;
+      max-width: 820px;
+      margin: 0 auto 32px;
       font-size: 1.25rem;
       color: #334155;
     }
@@ -65,6 +73,10 @@
       color: white;
       text-decoration: none;
       font-weight: 700;
+    }
+
+    .btn.green {
+      background: #2f6f4e;
     }
 
     .btn.secondary {
@@ -82,6 +94,24 @@
     h2 {
       font-size: 2.2rem;
       margin-bottom: 16px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .mission {
+      background: white;
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .mission p {
+      font-size: 1.15rem;
+      max-width: 850px;
+      margin: auto;
     }
 
     .grid {
@@ -102,6 +132,20 @@
     .card h3 {
       margin-top: 0;
       font-size: 1.3rem;
+    }
+
+    .impact {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .impact h3 {
+      font-size: 3rem;
+      margin: 0;
     }
 
     .quote {
@@ -128,20 +172,29 @@
         margin: 6px;
         display: inline-block;
       }
+
+      .impact {
+        gap: 28px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="banner">
+    🎉 Student and Volunteer Applications are now open!
+  </div>
+
   <nav>
-    <div class="logo">CuriousMindLab</div>
+    <div class="logo">🌼 CuriousMindLab</div>
     <div>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programs</a>
       <a href="resources.html">Resources</a>
       <a href="volunteer.html">Volunteer</a>
-      <a href="signup.html">Sign Up</a>
+      <a href="signup.html">Apply</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -149,20 +202,25 @@
   <div class="hero">
     <h1>Curiosity should never be limited by circumstance.</h1>
     <p>
-      CuriousMindLab expands access to high-quality STEM education for students
-      whose circumstances limit opportunity.
+      CuriousMindLab expands access to high-quality STEM education through free
+      mentorship, accessible resources, and a community that believes every curious
+      mind deserves an opportunity.
     </p>
-    <a class="btn" href="signup.html">Get Started</a>
-    <a class="btn secondary" href="volunteer.html">Volunteer</a>
+    <a class="btn" href="signup.html">Apply as a Student</a>
+    <a class="btn green" href="volunteer.html">Become a Volunteer</a>
   </div>
 
   <section>
-    <h2>Talent is universal. Opportunity is not.</h2>
-    <p>
-      Many curious students never receive the mentorship, resources, or encouragement
-      they deserve. CuriousMindLab exists to help change that through free learning,
-      mentoring, and accessible STEM resources.
-    </p>
+    <div class="mission center">
+      <h2>Our Mission</h2>
+      <p>
+        <strong>Talent is universal. Opportunity is not.</strong>
+        <br><br>
+        CuriousMindLab exists to help students whose circumstances limit access to
+        STEM opportunities by providing free mentorship, educational resources,
+        and a supportive learning community.
+      </p>
+    </div>
   </section>
 
   <section>
@@ -196,6 +254,26 @@
     </p>
   </section>
 
+  <section class="center">
+    <h2>Our Impact</h2>
+    <p>We are just getting started. These numbers will be updated honestly as CuriousMindLab grows.</p>
+
+    <div class="impact">
+      <div>
+        <h3>0</h3>
+        <p>Students Served</p>
+      </div>
+      <div>
+        <h3>0</h3>
+        <p>Volunteer Hours</p>
+      </div>
+      <div>
+        <h3>3</h3>
+        <p>Programs Offered</p>
+      </div>
+    </div>
+  </section>
+
   <section class="quote">
     “Every curious mind deserves the chance to learn, explore, and create.”
   </section>
@@ -206,17 +284,17 @@
       <div class="card">
         <h3>Students</h3>
         <p>Join free STEM learning opportunities and mentorship programs.</p>
-        <a class="btn" href="signup.html">Sign Up</a>
+        <a class="btn" href="https://forms.gle/caMmBNSW3dNx5VDV8" target="_blank">Apply Now</a>
       </div>
       <div class="card">
         <h3>Volunteers</h3>
         <p>Help teach, mentor, design resources, or support outreach.</p>
-        <a class="btn" href="volunteer.html">Volunteer</a>
+        <a class="btn green" href="https://forms.gle/sJ379AuczvffEJZz8" target="_blank">Volunteer</a>
       </div>
       <div class="card">
         <h3>Educators & Partners</h3>
         <p>Partner with us to bring STEM resources to students who need them most.</p>
-        <a class="btn" href="contact.html">Contact Us</a>
+        <a class="btn secondary" href="contact.html">Contact Us</a>
       </div>
     </div>
   </section>
@@ -224,6 +302,8 @@
   <footer>
     <p><strong>CuriousMindLab</strong></p>
     <p>Curiosity should never be limited by circumstance.</p>
+    <p>contactcuriousmindlab@gmail.com</p>
+    <p>© 2026 CuriousMindLab</p>
   </footer>
 </body>
 </html>
