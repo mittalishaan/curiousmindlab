@@ -1,116 +1,157 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ | CuriousMindLab</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.7}
-nav{background:white;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0}
-.logo{font-size:1.3rem;font-weight:800}
-nav a{text-decoration:none;margin-left:18px;color:#334155;font-weight:600}
-.container{max-width:900px;margin:auto;padding:70px 8%}
-h1{font-size:3rem}
-.card{background:white;padding:25px;border-radius:18px;margin:18px 0;box-shadow:0 8px 20px rgba(0,0,0,.06)}
-footer{margin-top:80px;padding:35px;background:#0f172a;color:white;text-align:center}
 
-      @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 5%;
-  }
+<link rel="stylesheet" href="style.css">
 
-  nav .logo {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  nav div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 12px;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 75px 6% 65px;
-  }
-
-  .hero h1,
-  h1 {
-    font-size: 2.35rem;
-    line-height: 1.1;
-  }
-
-  .hero p,
-  p {
-    font-size: 1rem;
-  }
-
-  section,
-  .container {
-    padding: 50px 6%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
-  .btn {
-    display: block;
-    width: fit-content;
-    margin: 12px auto;
-    text-align: center;
-  }
-
-  footer {
-    padding: 35px 6%;
-  }
-}
-</style>
 </head>
+
 <body>
-<nav>
-<div class="logo">CuriousMindLab</div>
-<div>
-      <a href="index.html">Home</a>
-      <a href="about.html">Our Story</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="volunteer.html">Volunteer</a>
-      <a href="signup.html">Apply</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+
+<div class="banner">
+🎉 Student and Volunteer Applications are now open!
 </div>
+
+<nav>
+
+<a class="logo" href="index.html">
+🌼 CuriousMindLab
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="about.html">Our Story</a>
+<a href="schedule.html">Schedule</a>
+<a href="volunteer.html">Volunteer</a>
+<a href="signup.html">Apply</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</div>
+
 </nav>
 
 <div class="container">
+
 <h1>Frequently Asked Questions</h1>
 
-<div class="card"><h2>Is CuriousMindLab free?</h2><p>Yes. Our goal is to provide free STEM learning opportunities for students facing barriers to access.</p></div>
+<div class="card">
 
-<div class="card"><h2>Who can apply?</h2><p>Our programs are designed primarily for students whose circumstances limit access to STEM education, including financial, geographic, accessibility, or mentorship barriers.</p></div>
+<h2>Is CuriousMindLab free?</h2>
 
-<div class="card"><h2>What subjects do you offer?</h2><p>We currently focus on mathematics, physics, and computer science.</p></div>
+<p>
 
-<div class="card"><h2>Do I need prior experience?</h2><p>No. Beginners are welcome. Curiosity matters more than background.</p></div>
+Yes. Our mission is to expand access to STEM education, and there is no cost to apply or participate in our current programs.
 
-<div class="card"><h2>How can I volunteer?</h2><p>You can help by tutoring, creating resources, building technology, or supporting outreach.</p></div>
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Who can apply?</h2>
+
+<p>
+
+Our programs are designed primarily for students whose circumstances limit access to STEM opportunities, including financial, geographic, accessibility, or mentorship barriers.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>What subjects do you currently offer?</h2>
+
+<p>
+
+We currently focus on mathematics, physics, computer science, and problem solving. Additional programs will be added as CuriousMindLab grows.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Do I need prior experience?</h2>
+
+<p>
+
+No. Curiosity, willingness to learn, and effort are more important than prior knowledge. Beginners are welcome.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>How do classes work?</h2>
+
+<p>
+
+Students apply through our application form. Accepted students will receive information about upcoming sessions and Zoom links by email.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>How can I volunteer?</h2>
+
+<p>
+
+Volunteers can tutor students, create educational resources, build technology, or support outreach efforts. Please visit the Volunteer page to apply.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>How can schools or organizations collaborate?</h2>
+
+<p>
+
+We welcome partnerships with schools, libraries, nonprofits, and community organizations that share our mission of expanding educational opportunity.
+
+</p>
+
+</div>
+
 </div>
 
 <footer>
-CuriousMindLab<br><br>
+
+<p><strong>CuriousMindLab</strong></p>
+
+<p>
+
 Curiosity should never be limited by circumstance.
+
+</p>
+
+<p>
+
+contactcuriousmindlab@gmail.com
+
+</p>
+
+<p>
+
+© 2026 CuriousMindLab
+
+</p>
+
 </footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+```
