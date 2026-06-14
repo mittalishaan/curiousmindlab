@@ -1,279 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | CuriousMindLab</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f8fafc;
-color:#0f172a;
-line-height:1.7;
-}
-
-nav{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #e2e8f0;
-}
-
-.logo{
-font-size:1.3rem;
-font-weight:800;
-}
-
-nav a{
-text-decoration:none;
-margin-left:18px;
-color:#334155;
-font-weight:600;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:70px 8%;
-}
-
-h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-h2{
-margin-top:60px;
-font-size:2rem;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:18px;
-margin-top:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.06);
-}
-
-ul{
-padding-left:20px;
-}
-
-footer{
-margin-top:80px;
-padding:35px;
-background:#0f172a;
-color:white;
-text-align:center;
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 5%;
-  }
-
-  nav .logo {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  nav div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 12px;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 75px 6% 65px;
-  }
-
-  .hero h1,
-  h1 {
-    font-size: 2.35rem;
-    line-height: 1.1;
-  }
-
-  .hero p,
-  p {
-    font-size: 1rem;
-  }
-
-  section,
-  .container {
-    padding: 50px 6%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
-  .btn {
-    display: block;
-    width: fit-content;
-    margin: 12px auto;
-    text-align: center;
-  }
-
-  footer {
-    padding: 35px 6%;
-  }
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | CuriousMindLab</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
-
-<div class="logo">
-CuriousMindLab
-</div>
-
-<div>
-      <a href="index.html">Home</a>
-      <a href="about.html">Our Story</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="volunteer.html">Volunteer</a>
-      <a href="signup.html">Apply</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-</div>
-
+  <a class="logo" href="index.html">🌼 CuriousMindLab</a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="signup.html">Apply</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 <div class="container">
+  <h1>Our Story</h1>
+  <p><strong>Curiosity should never be limited by circumstance.</strong></p>
 
-<h1>About CuriousMindLab</h1>
+  <div class="card">
+    <h2>Every curious mind deserves an opportunity.</h2>
+    <p>
+      CuriousMindLab was founded on a simple belief: talent exists everywhere,
+      but opportunity does not.
+    </p>
+    <p>
+      Many students never receive the mentorship, educational resources, or
+      encouragement they deserve because of financial challenges, geographic
+      isolation, accessibility barriers, or lack of opportunity.
+    </p>
+    <p>
+      CuriousMindLab exists to help close that gap through free STEM education,
+      mentorship, accessible resources, and technology.
+    </p>
+  </div>
 
-<p><strong>Curiosity should never be limited by circumstance.</strong></p>
+  <div class="card">
+    <h2>Our Mission</h2>
+    <p>
+      To expand access to high-quality STEM education for students whose
+      circumstances limit opportunity through free mentorship, accessible
+      resources, and community.
+    </p>
+  </div>
 
-<div class="card">
-<h2>Our Story</h2>
+  <div class="card">
+    <h2>Our Vision</h2>
+    <p>
+      We envision a future where financial hardship, disability, geography, or
+      lack of educational resources never prevents a curious student from
+      exploring STEM.
+    </p>
+  </div>
 
-<p>
+  <div class="card">
+    <h2>Our Values</h2>
+    <ul>
+      <li>Curiosity</li>
+      <li>Empathy</li>
+      <li>Service</li>
+      <li>Excellence</li>
+      <li>Opportunity</li>
+    </ul>
+  </div>
 
-We believe that talent exists everywhere, but opportunity does not.
+  <div class="card">
+    <h2>Who We Serve</h2>
+    <p>Our programs are designed primarily for students facing barriers such as:</p>
+    <ul>
+      <li>Financial hardship</li>
+      <li>Geographic isolation</li>
+      <li>Disability or accessibility challenges</li>
+      <li>Limited educational resources</li>
+      <li>Lack of mentorship</li>
+    </ul>
+  </div>
 
-Many students never receive the mentorship, resources, or encouragement they deserve simply because of where they live or the circumstances they face.
-
-CuriousMindLab was created to help remove those barriers through free STEM education, mentorship, and technology.
-
-</p>
-
-</div>
-
-<div class="card">
-<h2>Our Mission</h2>
-
-<p>
-
-To expand access to high-quality STEM education for students whose circumstances limit opportunity through free mentorship, accessible resources, and community.
-
-</p>
-
-</div>
-
-<div class="card">
-<h2>Our Vision</h2>
-
-<p>
-
-A future where financial hardship, disability, geography, or lack of educational resources never prevent a curious student from pursuing knowledge.
-
-</p>
-
-</div>
-
-<div class="card">
-<h2>Our Values</h2>
-
-<ul>
-
-<li>Curiosity</li>
-
-<li>Empathy</li>
-
-<li>Service</li>
-
-<li>Excellence</li>
-
-<li>Opportunity</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-<h2>Who We Serve</h2>
-
-<p>
-
-Our programs are designed primarily for students facing barriers such as:
-
-</p>
-
-<ul>
-
-<li>Financial hardship</li>
-
-<li>Geographic isolation</li>
-
-<li>Disability</li>
-
-<li>Limited educational resources</li>
-
-<li>Lack of mentorship</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-<h2>Our Philosophy</h2>
-
-<h3>
-
-Talent is universal. Opportunity is not.
-
-</h3>
-
-<p>
-
-Our goal is to help close that gap.
-
-</p>
-
-</div>
-
+  <div class="card">
+    <h2>Our Philosophy</h2>
+    <h3>Talent is universal. Opportunity is not.</h3>
+    <p>
+      Our goal is to help close that gap while building a community where
+      today’s learners can become tomorrow’s mentors.
+    </p>
+  </div>
 </div>
 
 <footer>
-
-CuriousMindLab
-
-<br><br>
-
-Curiosity should never be limited by circumstance.
-
+  <p><strong>CuriousMindLab</strong></p>
+  <p>Curiosity should never be limited by circumstance.</p>
+  <p>contactcuriousmindlab@gmail.com</p>
+  <p>© 2026 CuriousMindLab</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
