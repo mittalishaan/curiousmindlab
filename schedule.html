@@ -1,4 +1,3 @@
-<html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,169 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schedule | CuriousMindLab</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f8fafc;
-color:#0f172a;
-line-height:1.7;
-}
-
-nav{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #e2e8f0;
-}
-
-.logo{
-font-size:1.3rem;
-font-weight:800;
-}
-
-nav a{
-text-decoration:none;
-margin-left:18px;
-color:#334155;
-font-weight:600;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:70px 8%;
-}
-
-h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-.subtitle{
-font-size:1.15rem;
-color:#475569;
-margin-bottom:40px;
-}
-
-.card{
-background:white;
-padding:28px;
-border-radius:20px;
-margin-bottom:25px;
-box-shadow:0 8px 20px rgba(0,0,0,.06);
-border:1px solid #e2e8f0;
-}
-
-.status{
-display:inline-block;
-padding:6px 14px;
-background:#dcfce7;
-color:#166534;
-border-radius:999px;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 24px;
-background:#0f172a;
-color:white;
-text-decoration:none;
-border-radius:999px;
-font-weight:bold;
-margin-top:15px;
-}
-
-footer{
-margin-top:80px;
-padding:35px;
-background:#0f172a;
-color:white;
-text-align:center;
-}
-
-  @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 5%;
-  }
-
-  nav .logo {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  nav div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 12px;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 75px 6% 65px;
-  }
-
-  .hero h1,
-  h1 {
-    font-size: 2.35rem;
-    line-height: 1.1;
-  }
-
-  .hero p,
-  p {
-    font-size: 1rem;
-  }
-
-  section,
-  .container {
-    padding: 50px 6%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
-  .btn {
-    display: block;
-    width: fit-content;
-    margin: 12px auto;
-    text-align: center;
-  }
-
-  footer {
-    padding: 35px 6%;
-  }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<nav>
-
-<div class="logo">
-CuriousMindLab
+<div class="banner">
+🎉 Student and Volunteer Applications are now open!
 </div>
 
-<div>
+<nav>
+
+<a class="logo" href="index.html">
+🌼 CuriousMindLab
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="nav-links" id="navLinks">
 <a href="index.html">Home</a>
 <a href="about.html">Our Story</a>
 <a href="schedule.html">Schedule</a>
@@ -184,7 +39,7 @@ CuriousMindLab
 
 <h1>Class Schedule</h1>
 
-<p class="subtitle">
+<p>
 
 Our classes are completely free. We currently prioritize students whose circumstances limit access to high-quality STEM opportunities.
 
@@ -199,39 +54,29 @@ Applications Open
 </div>
 
 <h2>
-
-Grades 1 & 2
-
+Young Explorers: Grades 1–2
 </h2>
 
 <p>
 
-
+A fun and engaging introduction to mathematical thinking and problem solving.
 
 </p>
 
 <p>
-
 <strong>Format:</strong> Online via Zoom
-
 </p>
 
 <p>
-
 <strong>Cost:</strong> Free
-
 </p>
 
 <p>
-
 <strong>Audience:</strong> Grades 1 & 2
-
 </p>
 
 <p>
-
-<strong>Schedule:</strong> Saturday 8:30 – 9:00 AM PST
-
+<strong>Time:</strong> Saturday 8:30–9:00 AM PST
 </p>
 
 <a class="btn"
@@ -244,7 +89,22 @@ Apply to Join
 
 </div>
 
+<div class="card">
 
+<h2>
+
+More Classes Coming Soon
+
+</h2>
+
+<p>
+
+As CuriousMindLab grows, we hope to offer additional classes in mathematics,
+physics, computer science, and problem solving for students of different ages.
+
+</p>
+
+</div>
 
 <div class="card">
 
@@ -256,7 +116,8 @@ Our Promise
 
 <p>
 
-We believe that curiosity should never be limited by circumstance. As CuriousMindLab grows, we will continue expanding free educational opportunities and mentorship for students around the world.
+Curiosity should never be limited by circumstance. We are committed to expanding
+free educational opportunities and mentorship for students who need them most.
 
 </p>
 
@@ -266,21 +127,23 @@ We believe that curiosity should never be limited by circumstance. As CuriousMin
 
 <footer>
 
-<strong>CuriousMindLab</strong>
+<p><strong>CuriousMindLab</strong></p>
 
-<br><br>
-
+<p>
 Curiosity should never be limited by circumstance.
+</p>
 
-<br><br>
-
+<p>
 contactcuriousmindlab@gmail.com
+</p>
 
-<br><br>
-
+<p>
 © 2026 CuriousMindLab
+</p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
