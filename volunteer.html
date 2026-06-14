@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Volunteer | CuriousMindLab</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.7}
-nav{background:white;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0}
-.logo{font-size:1.3rem;font-weight:800}
-nav a{text-decoration:none;margin-left:18px;color:#334155;font-weight:600}
-.container{max-width:1000px;margin:auto;padding:70px 8%}
-h1{font-size:3rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:30px}
-.card{background:white;padding:25px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.06);border:1px solid #e2e8f0}
-.btn{display:inline-block;margin-top:20px;padding:14px 24px;border-radius:999px;background:#0f172a;color:white;text-decoration:none;font-weight:800}
-footer{margin-top:80px;padding:35px;background:#0f172a;color:white;text-align:center}
-
-  @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 5%;
-  }
-
-  nav .logo {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  nav div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 12px;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 75px 6% 65px;
-  }
-
-  .hero h1,
-  h1 {
-    font-size: 2.35rem;
-    line-height: 1.1;
-  }
-
-  .hero p,
-  p {
-    font-size: 1rem;
-  }
-
-  section,
-  .container {
-    padding: 50px 6%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
-  .btn {
-    display: block;
-    width: fit-content;
-    margin: 12px auto;
-    text-align: center;
-  }
-
-  footer {
-    padding: 35px 6%;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | CuriousMindLab</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="banner">🎉 Student and Volunteer Applications are now open!</div>
+
 <nav>
-<div class="logo">CuriousMindLab</div>
-<div>
-<a href="index.html">Home</a>
-<a href="about.html">Our Story</a>
-<a href="schedule.html">Schedule</a>
-<a href="volunteer.html">Volunteer</a>
-<a href="signup.html">Apply</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
-</div>
+  <a class="logo" href="index.html">🌼 CuriousMindLab</a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="signup.html">Apply</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 <div class="container">
-<h1>Volunteer With Us</h1>
-<p><strong>Help remove barriers to curiosity.</strong></p>
-<p>CuriousMindLab welcomes students and mentors who want to teach, create resources, support outreach, and make STEM learning more accessible.</p>
+  <h1>Volunteer With Us</h1>
+  <p><strong>Help remove barriers to curiosity.</strong></p>
+  <p>
+    CuriousMindLab welcomes students and mentors who want to teach, create
+    resources, support outreach, and make STEM learning more accessible.
+  </p>
 
-<div class="grid">
-<div class="card"><h2>🧑‍🏫 Tutor</h2><p>Help students learn math, physics, or computer science through free sessions.</p></div>
-<div class="card"><h2>📚 Create Resources</h2><p>Write notes, problems, explanations, or study guides for students.</p></div>
-<div class="card"><h2>💻 Build Technology</h2><p>Help improve our website, tools, and accessibility-focused projects.</p></div>
-<div class="card"><h2>🌎 Outreach</h2><p>Connect with schools, libraries, and organizations that serve students with fewer opportunities.</p></div>
-</div>
+  <div class="grid">
+    <div class="card">
+      <h2>🧑‍🏫 Tutor</h2>
+      <p>Help students learn math, physics, or computer science through free sessions.</p>
+    </div>
 
-<a class="btn"
-href="https://forms.gle/sJ379AuczvffEJZz8"
-target="_blank">
+    <div class="card">
+      <h2>📚 Create Resources</h2>
+      <p>Write notes, problems, explanations, or study guides for students.</p>
+    </div>
 
-Become a Volunteer
+    <div class="card">
+      <h2>💻 Build Technology</h2>
+      <p>Help improve our website, tools, and accessibility-focused projects.</p>
+    </div>
 
-</a>
+    <div class="card">
+      <h2>🌎 Outreach</h2>
+      <p>Connect with schools, libraries, and organizations that serve students with fewer opportunities.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Who should volunteer?</h2>
+    <p>
+      We welcome people who are patient, kind, reliable, and excited to help
+      students grow. You do not need to be perfect at every subject; you just
+      need a willingness to serve and learn.
+    </p>
+    <a class="btn green" href="https://forms.gle/sJ379AuczvffEJZz8" target="_blank">
+      Become a Volunteer
+    </a>
+  </div>
 </div>
 
 <footer>
-CuriousMindLab<br><br>
-Curiosity should never be limited by circumstance.
+  <p><strong>CuriousMindLab</strong></p>
+  <p>Curiosity should never be limited by circumstance.</p>
+  <p>contactcuriousmindlab@gmail.com</p>
+  <p>© 2026 CuriousMindLab</p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
