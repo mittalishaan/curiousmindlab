@@ -1,380 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CuriousMindLab</title>
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-      line-height: 1.6;
-    }
-
-    .banner {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 12px 16px;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    nav {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-weight: 900;
-      font-size: 1.25rem;
-      color: #0f172a;
-      text-decoration: none;
-    }
-
-    .nav-links a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #334155;
-      font-weight: 700;
-    }
-
-    .menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 90px 8%;
-      background: radial-gradient(circle at top left, #dcfce7, transparent 30%),
-                  radial-gradient(circle at bottom right, #dbeafe, transparent 35%),
-                  #f8fafc;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.7rem, 7vw, 5.8rem);
-      line-height: 1.03;
-      margin: 0 0 24px;
-      letter-spacing: -2px;
-    }
-
-    .hero p {
-      max-width: 820px;
-      margin: 0 auto 32px;
-      font-size: 1.25rem;
-      color: #475569;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 26px;
-      border-radius: 999px;
-      background: #0f172a;
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
-      margin: 8px;
-    }
-
-    .btn.green { background: #2f6f4e; }
-
-    section {
-      max-width: 1120px;
-      margin: auto;
-      padding: 75px 8%;
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 18px;
-      letter-spacing: -1px;
-    }
-
-    .mission {
-      background: white;
-      padding: 42px;
-      border-radius: 28px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      border: 1px solid #e2e8f0;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
-      margin-top: 32px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
-    }
-
-    .card h3 { margin-top: 0; }
-
-    .impact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .impact h3 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 45px 8%;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 16px 6%;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 64px;
-        left: 0;
-        width: 100%;
-        background: white;
-        border-bottom: 1px solid #e2e8f0;
-        padding: 18px 0;
-        text-align: center;
-      }
-
-      .nav-links.active {
-        display: block;
-      }
-
-      .nav-links a {
-        display: block;
-        margin: 14px 0;
-        font-size: 1rem;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 80px 6%;
-      }
-
-      .hero h1 {
-        font-size: 2.75rem;
-      }
-
-      .hero p {
-        font-size: 1.05rem;
-      }
-
-      .btn {
-        display: block;
-        width: 100%;
-        max-width: 310px;
-        margin: 12px auto;
-      }
-
-      section {
-        padding: 55px 6%;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .mission {
-        padding: 28px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<div class="banner">🎉 Student and Volunteer Applications are now open!</div>
 
-  <nav>
-    <a class="logo" href="index.html">🌼 CuriousMindLab</a>
+<nav>
+  <a class="logo" href="index.html">🌼 CuriousMindLab</a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="signup.html">Apply</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="hero">
+  <h1>Curiosity should never be limited by circumstance.</h1>
+  <p>
+    CuriousMindLab expands access to high-quality STEM education through free
+    mentorship, accessible resources, and a community that believes every curious
+    mind deserves an opportunity.
+  </p>
+  <a class="btn" href="https://forms.gle/caMmBNSW3dNx5VDV8" target="_blank">Apply as a Student</a>
+  <a class="btn green" href="https://forms.gle/sJ379AuczvffEJZz8" target="_blank">Become a Volunteer</a>
+</div>
 
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">Our Story</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="volunteer.html">Volunteer</a>
-      <a href="signup.html">Apply</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+<section>
+  <div class="card">
+    <h2>Talent is universal. Opportunity is not.</h2>
+    <p>
+      CuriousMindLab exists to help students whose circumstances limit access to
+      STEM opportunities by providing free mentorship, educational resources,
+      and a supportive learning community.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>How it works</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Apply</h3><p>Students complete a short application describing their interests and learning needs.</p></div>
+    <div class="card"><h3>2. We review</h3><p>We prioritize students facing financial, geographic, accessibility, or mentorship barriers.</p></div>
+    <div class="card"><h3>3. Learn</h3><p>Students join free sessions, receive resources, and build confidence in STEM.</p></div>
+    <div class="card"><h3>4. Give back</h3><p>As the community grows, learners can become mentors for future students.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>First Free Class</h2>
+  <div class="card">
+    <h3>How to Think Like a Problem Solver</h3>
+    <p>
+      Our first free session introduces creative mathematical thinking,
+      problem-solving strategies, and how to approach challenging questions with confidence.
+    </p>
+    <p><strong>Format:</strong> Online via Zoom</p>
+    <p><strong>Cost:</strong> Free</p>
+    <p><strong>Status:</strong> Applications are open</p>
+    <a class="btn" href="schedule.html">View Schedule</a>
+  </div>
+</section>
+
+<section>
+  <h2>Our Impact</h2>
+  <p>We are just getting started. These numbers will be updated honestly as CuriousMindLab grows.</p>
+  <div class="grid">
+    <div class="card"><h3>0</h3><p>Students Served</p></div>
+    <div class="card"><h3>0</h3><p>Volunteer Hours</p></div>
+    <div class="card"><h3>3</h3><p>Programs Offered</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Join our mission</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Students</h3>
+      <p>Join free STEM learning opportunities and mentorship programs.</p>
+      <a class="btn" href="https://forms.gle/caMmBNSW3dNx5VDV8" target="_blank">Apply Now</a>
     </div>
-  </nav>
-
-  <div class="hero">
-    <div>
-      <h1>Curiosity should never be limited by circumstance.</h1>
-      <p>
-        CuriousMindLab expands access to high-quality STEM education through free
-        mentorship, accessible resources, and a community that believes every curious
-        mind deserves an opportunity.
-      </p>
-      <a class="btn" href="https://forms.gle/caMmBNSW3dNx5VDV8" target="_blank">Apply as a Student</a>
-      <a class="btn green" href="https://forms.gle/sJ379AuczvffEJZz8" target="_blank">Become a Volunteer</a>
+    <div class="card">
+      <h3>Volunteers</h3>
+      <p>Help teach, mentor, create resources, or support outreach.</p>
+      <a class="btn green" href="https://forms.gle/sJ379AuczvffEJZz8" target="_blank">Volunteer</a>
+    </div>
+    <div class="card">
+      <h3>Partners</h3>
+      <p>Schools, libraries, and organizations can partner with us.</p>
+      <a class="btn" href="contact.html">Contact Us</a>
     </div>
   </div>
+</section>
 
-  <section>
-    <div class="mission">
-      <h2>Talent is universal. Opportunity is not.</h2>
-      <p>
-        CuriousMindLab exists to help students whose circumstances limit access to
-        STEM opportunities by providing free mentorship, educational resources,
-        and a supportive learning community.
-      </p>
-    </div>
-  </section>
+<footer>
+  <p><strong>CuriousMindLab</strong></p>
+  <p>Curiosity should never be limited by circumstance.</p>
+  <p>contactcuriousmindlab@gmail.com</p>
+  <p>© 2026 CuriousMindLab</p>
+</footer>
 
-  <section>
-    <h2>How it works</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>1. Apply</h3>
-        <p>Students complete a short application describing their interests and learning needs.</p>
-      </div>
-      <div class="card">
-        <h3>2. We review</h3>
-        <p>We prioritize students facing financial, geographic, accessibility, or mentorship barriers.</p>
-      </div>
-      <div class="card">
-        <h3>3. Learn</h3>
-        <p>Students join free sessions, receive resources, and build confidence in STEM.</p>
-      </div>
-      <div class="card">
-        <h3>4. Give back</h3>
-        <p>As the community grows, learners can become mentors for future students.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>First Free Class</h2>
-    <div class="card">
-      <h3>How to Think Like a Problem Solver</h3>
-      <p>
-        Our first free session introduces creative mathematical thinking, problem-solving
-        strategies, and how to approach challenging questions with confidence.
-      </p>
-      <p><strong>Format:</strong> Online via Zoom</p>
-      <p><strong>Cost:</strong> Free</p>
-      <p><strong>Status:</strong> Applications are open</p>
-      <a class="btn" href="https://forms.gle/caMmBNSW3dNx5VDV8" target="_blank">Apply to Join</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>What we do</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🧮 Mathematics</h3>
-        <p>Problem-solving sessions, math circles, and resources for curious learners.</p>
-      </div>
-      <div class="card">
-        <h3>⚛️ Physics</h3>
-        <p>Conceptual lessons that make physics intuitive, visual, and exciting.</p>
-      </div>
-      <div class="card">
-        <h3>💻 Computer Science</h3>
-        <p>Intro coding, algorithms, and technology projects designed for beginners.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Mentorship</h3>
-        <p>Free support for students facing financial, geographic, or accessibility barriers.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Our Impact</h2>
-    <p>We are just getting started. These numbers will be updated honestly as CuriousMindLab grows.</p>
-
-    <div class="impact">
-      <div class="card">
-        <h3>0</h3>
-        <p>Students Served</p>
-      </div>
-      <div class="card">
-        <h3>0</h3>
-        <p>Volunteer Hours</p>
-      </div>
-      <div class="card">
-        <h3>3</h3>
-        <p>Programs Offered</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Join our mission</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Students</h3>
-        <p>Join free STEM learning opportunities and mentorship programs.</p>
-        <a class="btn" href="https://forms.gle/caMmBNSW3dNx5VDV8" target="_blank">Apply Now</a>
-      </div>
-      <div class="card">
-        <h3>Volunteers</h3>
-        <p>Help teach, mentor, create resources, or support outreach.</p>
-        <a class="btn green" href="https://forms.gle/sJ379AuczvffEJZz8" target="_blank">Volunteer</a>
-      </div>
-      <div class="card">
-        <h3>Partners</h3>
-        <p>Schools, libraries, and organizations can partner with us.</p>
-        <a class="btn" href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p><strong>CuriousMindLab</strong></p>
-    <p>Curiosity should never be limited by circumstance.</p>
-    <p>contactcuriousmindlab@gmail.com</p>
-    <p>© 2026 CuriousMindLab</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
