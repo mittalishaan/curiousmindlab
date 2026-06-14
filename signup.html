@@ -5,172 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apply | CuriousMindLab</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f8fafc;
-color:#0f172a;
-}
-
-nav{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #e2e8f0;
-}
-
-.logo{
-font-size:1.3rem;
-font-weight:800;
-}
-
-nav a{
-text-decoration:none;
-margin-left:18px;
-color:#334155;
-font-weight:600;
-}
-
-.container{
-max-width:850px;
-margin:auto;
-padding:70px 8%;
-}
-
-h1{
-font-size:3rem;
-}
-
-form{
-background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.06);
-}
-
-label{
-display:block;
-margin-top:18px;
-font-weight:bold;
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin-top:8px;
-border:1px solid #cbd5e1;
-border-radius:8px;
-font-size:16px;
-box-sizing:border-box;
-}
-
-button{
-margin-top:25px;
-padding:14px 28px;
-background:#0f172a;
-color:white;
-border:none;
-border-radius:999px;
-font-size:16px;
-cursor:pointer;
-}
-
-.note{
-margin-top:25px;
-padding:20px;
-background:#eef2ff;
-border-radius:12px;
-}
-
-footer{
-margin-top:80px;
-padding:35px;
-background:#0f172a;
-color:white;
-text-align:center;
-}
-
-  @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 5%;
-  }
-
-  nav .logo {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  nav div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 12px;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 75px 6% 65px;
-  }
-
-  .hero h1,
-  h1 {
-    font-size: 2.35rem;
-    line-height: 1.1;
-  }
-
-  .hero p,
-  p {
-    font-size: 1rem;
-  }
-
-  section,
-  .container {
-    padding: 50px 6%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
-  .btn {
-    display: block;
-    width: fit-content;
-    margin: 12px auto;
-    text-align: center;
-  }
-
-  footer {
-    padding: 35px 6%;
-  }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<nav>
-
-<div class="logo">
-CuriousMindLab
+<div class="banner">
+🎉 Student Applications are now open!
 </div>
 
-<div>
+<nav>
+
+<a class="logo" href="index.html">
+🌼 CuriousMindLab
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="nav-links" id="navLinks">
 <a href="index.html">Home</a>
 <a href="about.html">Our Story</a>
 <a href="schedule.html">Schedule</a>
@@ -188,48 +41,91 @@ CuriousMindLab
 
 <p>
 
-We're excited that you're interested in CuriousMindLab.
+Thank you for your interest in CuriousMindLab.
 
-Our programs are designed primarily for students whose circumstances limit access to STEM opportunities.
+Our mission is to ensure that curiosity is never limited by circumstance by expanding access to high-quality STEM education.
 
 </p>
 
-<div class="note">
-  <h2>Apply as a Student</h2>
-  <p>
-    Please complete our official Student Application form. We will review your response
-    and contact you about upcoming free STEM learning opportunities.
-  </p>
+<div class="card">
 
-  <a href="https://forms.gle/caMmBNSW3dNx5VDV8"
-     target="_blank"
-     style="
-     display:inline-block;
-     padding:14px 28px;
-     background:#0f172a;
-     color:white;
-     text-decoration:none;
-     border-radius:999px;
-     font-weight:bold;
-     margin-top:10px;
-     ">
-    Open Student Application
-  </a>
+<h2>
+
+Apply as a Student
+
+</h2>
+
+<p>
+
+Please complete our official application form. We review every submission individually and will contact accepted students with information about upcoming classes and learning opportunities.
+
+</p>
+
+<p>
+
+There is no cost to apply or participate.
+
+</p>
+
+<a class="btn"
+href="https://forms.gle/caMmBNSW3dNx5VDV8"
+target="_blank">
+
+Open Student Application
+
+</a>
+
 </div>
 
+<div class="card">
 
+<h2>
+
+Who should apply?
+
+</h2>
+
+<ul>
+
+<li>Students who enjoy learning</li>
+
+<li>Students interested in STEM</li>
+
+<li>Students seeking mentorship</li>
+
+<li>Students facing barriers to educational opportunities</li>
+
+</ul>
+
+</div>
 
 </div>
 
 <footer>
 
-CuriousMindLab
+<p><strong>CuriousMindLab</strong></p>
 
-<br><br>
+<p>
 
 Curiosity should never be limited by circumstance.
 
+</p>
+
+<p>
+
+contactcuriousmindlab@gmail.com
+
+</p>
+
+<p>
+
+© 2026 CuriousMindLab
+
+</p>
+
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
